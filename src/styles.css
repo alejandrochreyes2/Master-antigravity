@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ───── Paleta día (modo claro ZenTasks) ─────────────────────────── */
+@theme {
+  --color-acento:        #ef4444; /* red-500 */
+  --color-acento-hover:  #dc2626; /* red-600 */
+  --color-acento-suave:  #fee2e2; /* red-100 */
+
+  --color-fondo:         #f8fafc; /* slate-50 */
+  --color-tarjeta:       #ffffff;
+  --color-cabecera:      rgba(255, 255, 255, 0.90);
+  --color-hover:         #f1f5f9; /* slate-100 */
+  --color-overlay:       rgba(15, 23, 42, 0.45);
+
+  --color-borde:         #f1f5f9; /* Muy sutil */
+  --color-borde-check:   #cbd5e1;
+
+  --color-texto-primary:   #0f172a;
+  --color-texto-secondary: #64748b;
+  --color-texto-muted:     #94a3b8;
+
+  --color-error:       #ef4444; /* ZenTasks base color */
+  --color-error-hover: #dc2626;
+  --color-error-suave: #fee2e2;
+
+  --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* ───── Base ────────────────────────────────────────────────────────── */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   MODO OSCURO — se activa con la clase .dark en <html>
+═══════════════════════════════════════════════════════════════════ */
+html.dark {
+  --color-acento:        #ef4444; 
+  --color-acento-hover:  #f87171;
+  --color-acento-suave:  #450a0a;
+
+  --color-fondo:         #1c1313; /* reddish dark black */
+  --color-tarjeta:       #261919; /* reddish dark gray */
+  --color-cabecera:      rgba(28, 19, 19, 0.95);
+  --color-hover:         #332020; /* reddish hover */
+  --color-overlay:       rgba(0, 0, 0, 0.75);
+
+  --color-borde:         #3d2828;
+  --color-borde-check:   #523636;
+
+  --color-texto-primary:   #f8fafc;
+  --color-texto-secondary: #cbd5e1;
+  --color-texto-muted:     #94a3b8;
+
+  --color-error:       #ef4444;
+  --color-error-hover: #f87171;
+  --color-error-suave: #450a0a;
+
+  --shadow-modal: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+html.dark body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto-primary);
+}
+
+/* inputs y textareas heredan bien en modo oscuro */
+html.dark input,
+html.dark textarea {
+  color-scheme: dark;
+}
+
+/* ───── Focus accesible ─────────────────────────────────────────────── */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+/* ───── Scrollbar sutil ─────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: #cbd5e1; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+html.dark ::-webkit-scrollbar-thumb  { background: #334155; }
+html.dark ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* ───── Selección ───────────────────────────────────────────────────── */
+::selection {
+  background: #fecaca;
+  color: #7f1d1d;
+}
+html.dark ::selection {
+  background: #7f1d1d;
+  color: #fecaca;
+}
