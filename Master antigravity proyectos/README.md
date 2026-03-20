@@ -11,4 +11,9 @@ A continuación se listan los proyectos disponibles:
    - Construida con Angular 21, Signals y TailwindCSS.
    - Incluye persistencia local y soporte para modo oscuro.
 
+2. [**02-generador-contraseñas**](https://github.com/alejandrochreyes2/Master-antigravity/tree/02-generador-contraseñas)
+   - Utilidad web generadora de contraseñas seguras y aleatorias con copia automática.
+   - Construida exclusivamente con HTML5, CSS3 y JavaScript Vanilla.
+   - Interfaz moderna, minimalista y responsiva, siguiendo el estándar de 1rem = 10px.
+
 *Nota: Para ver el código de un proyecto, haz clic en el enlace para navegar a su rama correspondiente.*
